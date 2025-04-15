@@ -9,7 +9,7 @@ Element Tag: ${elementTag}`
   );
 }
 
-["click", "input", "change"].forEach((eventType) => {
+["click", "input"].forEach((eventType) => {
   document.addEventListener(
     eventType,
     (e) => {
