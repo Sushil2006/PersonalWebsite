@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+#header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("assets/img-nobg-new.png");
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  overflow: hidden;
+  animation: moveBackground 2s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 100% 75%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.container {
+  height: 100%;
+  margin: 10px 5%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+nav ul li {
+  flex: 1;
+  list-style: disc;
+  display: inline-block;
+  margin: 10px 30px;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: " ";
+  width: 0;
+  height: 3px;
+  background-color: red;
+  left: 0;
+  bottom: -6px;
+  position: absolute;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  margin-left: 25px;
+  width: 60%;
+  margin-top: 8%;
+}
+
+.header-text h1 {
+  margin-bottom: 10px;
+  font-size: 60px;
+}
+
+.header-text p {
+  font-size: 20px;
+  width: 70%;
+}
+
+/* achievements */
+#achievements {
+  width: 100vw;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+#achievements h1 {
+  font-size: 75px;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
+  text-decoration: underline;
+}
+
+.achievements-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100vw;
+}
+
+.achievements-text {
+  padding-left: 50px;
+  flex: 2;
+}
+
+.achievements-text ul {
+  list-style: disc;
+  margin-top: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.achievements-text ul li {
+  display: flex;
+  font-size: 18px;
+  margin-bottom: 10px;
+  list-style: disc;
+}
+
+.achievements-text ul li a {
+  color: cyan;
+  line-height: 1.5;
+}
+
+.image-section {
+  padding: 50px;
+  flex: 1;
+  width: 100%;
+  padding-right: 100px;
+  margin-bottom: 100px;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* about */
+#about {
+  width: 100vw;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+#about h1 {
+  font-size: 75px;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 100%;
+  text-decoration: underline;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100vw;
+}
+
+.about-text {
+  padding-left: 50px;
+  padding-top: 15px;
+  flex: 3;
+}
+
+.about-text ul {
+  list-style: disc;
+  margin-top: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.about-text ul li {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 10px;
+  list-style: disc;
+}
+
+.about-text ul li a {
+  color: cyan;
+  line-height: 1.5;
+}
+
+.about-image-section {
+  flex: 1;
+  width: 100%;
+  padding-right: 100px;
+  margin-bottom: 100px;
+}
+
+.about-image-section img {
+  object-fit: cover;
+}
+
+.answer-text {
+  line-height: 1.5;
+  color: greenyellow;
+}
+
+/* skills */
+#skills {
+  width: 100vw;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+}
+
+#skills h1 {
+  font-size: 75px;
+  margin-bottom: 0px;
+  text-align: center;
+  width: 100%;
+  text-decoration: underline;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+}
+
+.skill-card {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 35px 60px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+  min-width: 200px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.skill-card:hover {
+  background: linear-gradient(135deg, #d1af76, #ff4b2b); /* gradient colors */
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.download-btn {
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  border-radius: 999px;
+  padding: 4px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.download-btn-inner {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 26px 46px;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 24px;
+  display: block;
+  transition: 0.5s;
+}
+
+.download-btn-inner:hover {
+  background-color: transparent;
+}
+
+/* tokenizer */
+#tokenizer h1 {
+  font-size: 75px;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 100%;
+  text-decoration: underline;
+}
+
+.tokenizer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+#userInput {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+  color: white;
+  background-color: black;
+}
+
+#userInput:focus {
+  border-color: #007bff;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+#jsonOutput h3 {
+  font-size: 10px;
+}
+
+#jsonOutput {
+  margin-left: 15%;
+  margin-bottom: 100px;
+}
+
+#jsonOutput h3 {
+  font-size: 30px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  margin-top: 50px;
+}
+
+#jsonOutput p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
